@@ -5,6 +5,7 @@
 	- importamos al mongoose
 	- Llamamos a la funcion connect para poder conectarnos a la DB
 	- Exportamos el mongoose
+	
 
 - Part 2 -> clientes-model.js:
 
@@ -14,6 +15,7 @@
 	- Creamos u esquema #2 que va tener un array que hace referencia al esquema1 #1 (Conviertiendolo en un documento embebido)
 	- LLamamo a la función "model()" de mongoose y lo instanciamos en una variable el modelo con el esquema
 	- Exportamos la variable que hace refrencia al modelo
+
 
 - Part 3 -> index.js:
 
