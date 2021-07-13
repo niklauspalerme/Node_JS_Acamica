@@ -1,6 +1,6 @@
 # Documento Embebidos
 
-- Part 1 --> conexion.js:
+- #Part 1 --> conexion.js:
 
 	- importamos al mongoose
 	- Llamamos a la funcion connect para poder conectarnos a la DB
