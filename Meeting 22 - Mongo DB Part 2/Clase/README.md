@@ -1,12 +1,12 @@
 # Documento Embebidos
 
-- # 1) conexion.js:
+- Part 1 -> conexion.js:
 
 	- importamos al mongoose
 	- Llamamos a la funcion connect para poder conectarnos a la DB
 	- Exportamos el mongoose
 
-- # 2) clientes-model.js:
+- Part 2 -> clientes-model.js:
 
 	- Importamos el mongoose del archivo conexion.js para seguir usandolo
 	- Creamos una variable "schema" que va tener referencia a la variable "Schema" del mongoose
@@ -15,7 +15,7 @@
 	- LLamamo a la función "model()" de mongoose y lo instanciamos en una variable el modelo con el esquema
 	- Exportamos la variable que hace refrencia al modelo
 
-- # 3) index.js:
+- Part 3 -> index.js:
 
 	- Importamos el express y el modelado de la DB
 	- Creamos los respectivos middleware
