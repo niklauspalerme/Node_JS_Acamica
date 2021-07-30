@@ -30,10 +30,9 @@ const getGitHubUser = (usuario) => {
 
 getGitHubUser(usuario);
 
-
-
 ///////////////////////////////////////////////////////////////////////////////
 // Ejericicio #2 -Promesas Encadenas (utilizan varias operaciones de then)
+
 
 //Luego de consumir la api de githhub. Debes consumir otra url que te traiga
 //En este caso se escogio el de followers que tenga la cuenta
