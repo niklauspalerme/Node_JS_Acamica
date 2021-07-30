@@ -4,5 +4,5 @@
 	- El codigo realizado en clase
 
 2. Tarea:
-	- El codigo propusto para la tarea 
+	- El codigo que se mando de tarea
 
