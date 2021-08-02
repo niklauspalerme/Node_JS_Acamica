@@ -8,6 +8,7 @@
 	- El archivo **.env**  estará al mismo nivel que src:
 		- **.env** se encargara de las variables de entornos que usemos
 		- Para pode usarlo necesitamos instalar por npm:
+		
 		> npm i dotenv --save
 
 
