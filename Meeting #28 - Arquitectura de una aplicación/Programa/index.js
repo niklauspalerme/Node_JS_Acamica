@@ -1,0 +1,35 @@
+const express = require('express');
+const app = express();
+require('dotenv').config();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//Middlewares
+
+app.use(express.json());
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//Ruteo
+
+const songs = require('./src/routes/canciones');
+const albums = require('./src/routes/albums');
+const bands = require('./src/routes/banda');
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//Endpoints - Con Ruteo
+
+
+app.use('/canciones', songs)
+app.use('/albums',albums)
+app.use('/bandas', bands)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//Puerto
+
+
+app.listen(process.env.API_PORT, function () {
+    console.log(`Sistema armado en el puerto ${process.env.API_PORT}!`);
+});
