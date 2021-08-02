@@ -1,13 +1,14 @@
 # Meeting #28 - Pasos para la elaboracion del programa
 
-- En este programa nos enforcaremos en las buenas practicar a realizar para organizar el codigo y las variables de entorno
+## En este programa nos enforcaremos en las buenas practicas para organizar los archivos y el uso de variables de entorno
 
-1. src y archivos principales:
+1. src y archivos en las ruta principal:
 	- Contendra todas las sub-carpetas que vayemos a trabajar con sus respectivos archivos
 	- El **index.js** estara al mismo nivel que la carpeta src
-	- El archivo **.env**  estara al mismo nivel que src:
+	- El archivo **.env**  estará al mismo nivel que src:
 		- **.env** se encargara de las variables de entornos que usemos
-		- Para pode usarlo necesitamos in
+		- Para pode usarlo necesitamos instalar por npm:
+		> npm i dotenv --save
 
 
 2. src/config:
