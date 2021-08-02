@@ -29,4 +29,5 @@
 	- [X] Modelaje --> https://sequelize.org/master/manual/model-basics.html
 	- [x] Queries de busqueda --> https://sequelize.org/master/manual/model-querying-finders.html
 	- [x] Video tutorial Express y Sequelize --> https://www.youtube.com/watch?v=5wvvyrx6Fvw
+	- [x] Como hacer un ORM en sequelize --> https://programmerclick.com/article/2697993738/
 
