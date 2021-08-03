@@ -1,6 +1,9 @@
 # Meeting #26 - Pasos para la elaboracion del programa
 
 
+![Imgane 2](https://github.com/niklauspalerme/Node_JS_Acamica/blob/main/Meeting%20%2326%20-%20ORM%20con%20Sequelize/SQL%20y%20Postman/img2.png)
+
+
 ![Imagen 1](https://github.com/niklauspalerme/Node_JS_Acamica/blob/main/Meeting%20%2326%20-%20ORM%20con%20Sequelize/SQL%20y%20Postman/img1.png)
 
 1. Directorio --> db:
