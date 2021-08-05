@@ -1,23 +1,24 @@
-# Teoria de Promesas y Fetch 
+# Teoria- Historia 
 
 
-Para empezar se debe ententder que las funciones en JS son de primer orden ya que estas  se pueden almacenar en variables, pasar como parámetro y retornar asi mismo funciones.
+Para empezar se debe entender que las funciones en JS son de primer orden ya que estas  se pueden almacenar en variables, pasar como parámetro y retornar asi mismo funciones.
 
-JavaScript es "single threaded". Eso significa que sólo puede realizar una acción a la vez, desde el único hilo de ejecutación disponible.
+JavaScript es **"single threaded"**. Eso significa que sólo puede realizar una acción a la vez, desde el único hilo de ejecutación disponible.
 Si tenemos una secuencia de operaciones, éstas operaciones se deben ejecutar una después de otra (ya que no es posible crear más hilos).
 Estos procesos internos de ejecución pueden trabajar de manera async
 
 La implementación de JavaScript es distinta en cada navegador. Pero generalmente la ejecución de código JavaScript ocurre a la par con el proceso de pintar elementos, actualizar los estilos, y gestionar acciones del usuario (como resaltar texto o interactuar con los controles de un formulario). La actividad en una de estas cosas retrasa a las otras.
 
-Por ejemplo:
-Como ser humano, eres multihilo. Puedes escribir con varios dedos. Puedes caminar y mantener una conversación al mismo tiempo.
-Sin embargo hay operaciones de bloqueo con las que tenemos que lidiar. Por ejemplo, al estornudar.
-Otras actividades son forzadas a suspenderse durante el estornudo.
+## Por ejemplo:
+
+Como ser humano, **eres multihilo**. Puedes escribir con varios dedos. **Puedes caminar y mantener una conversación al mismo tiempo**.
+Sin embargo **hay operaciones de bloqueo** con las que tenemos que lidiar. **Por ejemplo, al estornudar.
+Otras actividades son forzadas a suspenderse durante el estornudo**.
 Eso es bastante molesto, especialmente cuando estás muy concentrando haciendo múltiples actividades en simultáneo.
 En JS, la solución a esta limitante son los events y callbacks.
 
 
-Debido al uso excesivo de callback se empezo a generar una problematicallamada 
+Debido al uso excesivo de callback se empezo a generar una problematica llamada 
 > callback hell
 
 ```
@@ -31,12 +32,31 @@ hacerAlgo(function(resultado) {
 ```
 
 
-1. Clase:
-	- El codigo realizado en clase
-
-2. Tarea:
-	- El codigo que se mando de tarea
+De esa problematica surgieron las promesas para pode manejar mejor los callbacks:
 
 
-- Link para leer: https://code.tutsplus.com/es/tutorials/keeping-promises-with-javascript--cms-25056 
+```
+verificarSiYaConfirmoSuCorreo()
+.then(correoConfirmado => {
+  if (correoConfirmado)
+    return obtenerCategoriasPreferidas(userId);
+  else
+    throw new Error('Primero por favor confirma tu correo');
+})
+.then(categoriasPreferidas => {
+  if (categoriasPreferidas.length > 0)    
+    return obtenerArticulosPopularesEn(categoriasPreferidas);
+  else
+    return obtenerArticulosPopulares();
+})
+.then(listaArticulos => console.log('Artículos a mostrar: ' + listaArticulos))
+.catch(failureCallback);
+```
+
+
+
+
+# Links
+
+- Link para leer: https://programacionymas.com/blog/promesas-javascript
 
