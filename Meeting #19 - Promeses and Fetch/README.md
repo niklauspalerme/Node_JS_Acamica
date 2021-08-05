@@ -1,4 +1,4 @@
-# Teoria- Historia 
+# Teoria - Historia 
 
 
 Para empezar se debe entender que las funciones en JS son de primer orden ya que estas  se pueden almacenar en variables, pasar como parámetro y retornar asi mismo funciones.
@@ -15,24 +15,33 @@ Como ser humano, **eres multihilo**. Puedes escribir con varios dedos. **Puedes 
 Sin embargo **hay operaciones de bloqueo** con las que tenemos que lidiar. **Por ejemplo, al estornudar.
 Otras actividades son forzadas a suspenderse durante el estornudo**.
 Eso es bastante molesto, especialmente cuando estás muy concentrando haciendo múltiples actividades en simultáneo.
-En JS, la solución a esta limitante son los events y callbacks.
+**En JS, la solución a esta limitante son los events y callbacks.**
 
 
-Debido al uso excesivo de callback se empezo a generar una problematica llamada 
+Debido al uso excesivo de callback para **manejar operaciones async** se empezo a generar una problematica llamada 
 > callback hell
 
 ```
-hacerAlgo(function(resultado) {
-  hacerAlgoMas(resultado, function(nuevoResultado) {
-    hacerUnaTerceraCosa(nuevoResultado, function(resultadoFinal) {
-      console.log('Resultado final: ' + resultadoFinal);
+verificarSiYaConfirmoSuCorreo(function(correoConfirmado) {
+  if (correoConfirmado) {
+    obtenerCategoriasPreferidas(userId, function(categoriasPreferidas) {
+      if (categoriasPreferidas.length > 0)    
+        obtenerArticulosPopularesEn(categoriasPreferidas, function(listaArticulos) {
+          console.log('Artículos de las categorías preferidas: ' + listaArticulos);
+        }, failureCallback);
+      else
+        obtenerArticulosPopulares(function(listaArticulos) {
+          console.log('Artículos más vistos en general: ' + listaArticulos);
+        }, failureCallback); 
     }, failureCallback);
-  }, failureCallback);
+  } else {
+    console.log('Primero por favor confirma tu correo');
+  }
 }, failureCallback);
 ```
 
 
-De esa problematica surgieron las promesas para pode manejar mejor los callbacks:
+De esta problematica surgieron **las promesas (son un azúcar sintáctico)** para pode manejar mejor los callbacks:
 
 
 ```
@@ -53,8 +62,20 @@ verificarSiYaConfirmoSuCorreo()
 .catch(failureCallback);
 ```
 
+# Promesas
 
+Las promesas es una **Clase especial** que tiene JS que cuando se instancia/declara debe recibir como **parametro un Callback (1)** y esta como resultado puede
+retornar 2 Callback, estos 2 Callback sirve para avisar si la tarea asincrona
+se ejecuto de manera exitosa **(Callback 2 o resolve)** o hubo algun error durante el proceso **(Callback 3 o reject)**.
+Con el uso de las promesas podemos envolver en ella todos los procesos que son **async** y esperar un resultado exitoso y fallido
 
+- resolve: Cuando la promesa se cumple exitosamente
+- reject : Cuando la promesa tiene exceptions/errores/no se completa
+
+## Ejecución de una Promesa
+
+- **.then()** se utiliza para poder manejar los resultados que retorna el **resolve*
+- **.cath()** se utiliza para manejar los errores provenientes del **reject**
 
 # Links
 
