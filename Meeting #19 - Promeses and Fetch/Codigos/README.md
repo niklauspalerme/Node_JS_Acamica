@@ -1,7 +1,8 @@
 # Encontraremos
 
 1. Clase:
-	- El codigo realizado en clase
+	- El codigo realizado en clase de Promesas
+	- El codigo realizado en clase de fetch
 
 2. Tarea:
 	- El codigo que se mando de tarea
