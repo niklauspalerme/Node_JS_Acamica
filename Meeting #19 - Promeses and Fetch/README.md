@@ -77,6 +77,20 @@ Con el uso de las promesas podemos envolver en ella todos los procesos que son *
 - **.then()** se utiliza para poder manejar los resultados que retorna el **resolve*
 - **.cath()** se utiliza para manejar los errores provenientes del **reject**
 
+# Fetch
+
+Antes para poder realizar manejar peticiones HTTP se utilizaba el AJAX o XMLHTTPRequest para asi poder acceder y manipular la data de la petición. **fetch** vendria siendo un azúcar sintácitco para esta petición. Entonces el **API fetch proporciona una interfaz en JS para el manejo de peticiones HTTP a través de promesas** recibiendo un conjunto de parametros y generando un resultado tanro positivo como negativo.
+
+## Uso del fetch
+
+Para poder usar el fetch se debe instalar en no a través del comando **npm i node-featch** y luego instanciarlo  en una variable para su uso **const fetch = require('node-fetch');**
+
+## Ejecución del fetch
+
+- **.then()** se utiliza para poder manejar los resultados que retorna el **resolve*
+- **.cath()** se utiliza para manejar los errores provenientes del **reject**
+
+
 # Links
 
 - Link para leer: https://programacionymas.com/blog/promesas-javascript

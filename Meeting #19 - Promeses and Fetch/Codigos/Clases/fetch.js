@@ -1,13 +1,6 @@
-//Fetch es una función para acceder a recursos del servidor de manera asíncrona,
-//basado en promesas.Nos va a permitir realizar llamadas HTTP a
-//cualquier lugar y capturar su respuesta para disponer de la información.
-//Se debe Instalar la librería con NPM
-//npm i node-fetch
-//Incluirla en tu código fuente:
-//const fetch = require('node-fetch');
-//NOTA: Para el uso del then es necesario usar 2 then
-//Ya que con el fetch debemos manejar 2 promesas
-//NOTA #2: El Fetch mas tiempo en ejecutarse y resolver la promesa
+//NOTA #1: Para el uso del then es necesario usar 2 then
+//Ya que con el fetch debemos manejar 2 callbacks/promesas
+//NOTA #2: El Fetch al ser async tarda mas tiempo en ejecutarse y de resolver la promesa
 //Por eso cuando se la haga un console.log directo saldra Promise <<Pendind>>
 
 ///////////////////////////////////////////////////////////////////////////////
