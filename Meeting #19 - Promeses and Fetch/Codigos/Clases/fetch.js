@@ -14,7 +14,7 @@ let usuario = "niklauspalerme"
 
 const getGitHubUser = (usuario) => {
    return fetch(`https://api.github.com/users/${usuario}`)
-  .then(resp=> // 1) El primer then te retorna datos del request (headers, body,etc)
+  .then(resp=> // 1) El primer then() te retonar la response (headers,body,etc)
     resp.json()) // Lo debes transformar a json para poder manipular la data
   .then( data => //2)  Para poder obtener los datos debes anidarle otro then para tener el response de la 2da promesa
     console.log("Dato del user - Ejercicio #1: ",data)) 
