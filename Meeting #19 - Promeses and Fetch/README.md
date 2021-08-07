@@ -87,11 +87,20 @@ Para poder usar el fetch se debe instalar en no a través del comando **npm i no
 
 ## Ejecución del fetch
 
-- **.then()** se utiliza para poder manejar los resultados que retorna el **resolve*
+- **.then()** se utiliza para poder manejar los resultados que retorna el **resolve** y por lo general se usa **dos (2) then()** **(es decir un encadenamiento de promesas)** para pode obtener los datos deseados del servicio:
+
+  - El primer then() te va retornar **una response** del protocolo HTTP Requets que para que sea manejable
+  debes transformar ese response a través del metodo **.json()** que posee el **response**
+
+  - El segundo then() vas a poder manipular el dato resultado y podras retornarlo ahí
+
 - **.cath()** se utiliza para manejar los errores provenientes del **reject**
+
 
 
 # Links
 
-- Link para leer: https://programacionymas.com/blog/promesas-javascript
+- Promesas origenes: https://programacionymas.com/blog/promesas-javascript
+- Promesas: https://code.tutsplus.com/es/tutorials/keeping-promises-with-javascript--cms-25056 
+- Response del Fetch: https://developer.mozilla.org/es/docs/Web/API/Response
 

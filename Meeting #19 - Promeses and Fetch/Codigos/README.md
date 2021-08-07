@@ -5,8 +5,7 @@
 	- El codigo realizado en clase de fetch
 
 2. Tarea:
-	- El codigo que se mando de tarea
+	- El codigo de la Tarea que es como resolver una promesa y fetch en un endpoint
 
 
-- Link para leer: https://code.tutsplus.com/es/tutorials/keeping-promises-with-javascript--cms-25056 
 
