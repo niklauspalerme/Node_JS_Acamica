@@ -7,7 +7,7 @@
 	- Un programa facíl para ver como se usa el async y wait
 
 3. Tarea
-	- El mismo programa pero ahora aplicanco asíncronia  en los endpoints 
+	- El mismo programa de "Programo" pero ahora aplicando asíncronia en los endpoints 
 
 
 
