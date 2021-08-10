@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "fcc0fdb0-e3f4-4002-a36d-838267a3a080",
+		"name": "Tarea - Meeting #21 - Mongo DB Part 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /platos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/platos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"platos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /platos/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/platos/61129adb3b5bf979d464d261",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"platos",
+						"61129adb3b5bf979d464d261"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /platos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plato\": \"Cachapa\",\r\n    \"precio\": \"850\",\r\n    \"tipo_de_plato\": \"Latino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/platos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"platos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /platos/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plato\": \"Cachapa2\",\r\n    \"precio\": \"850\",\r\n    \"tipo_de_plato\": \"Latin2o\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/platos/61129b13790b466a38cff0a7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"platos",
+						"61129b13790b466a38cff0a7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /platos/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plato\": \"Cachapa2\",\r\n    \"precio\": \"850\",\r\n    \"tipo_de_plato\": \"Latin2o\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/platos/61129b13790b466a38cff0a7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"platos",
+						"61129b13790b466a38cff0a7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
