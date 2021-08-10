@@ -13,7 +13,7 @@ const main = () =>{
     server.use(getMoviesRouters());
 
 
-    server.listen(9090, ()=>{
+    server.listen(PORT, ()=>{
         console.log(`Escuchando en el puerto: ${PORT}`);
     })
 
