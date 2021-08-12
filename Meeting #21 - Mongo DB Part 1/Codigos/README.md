@@ -1,19 +1,20 @@
-# Encontraremos
+# Resumen del codigo Meeting #21 - Mongo DB Part 1
 
-1. Clase (Efrain):
+## 1) Clase (Efrain):
+
 	- El codigo realizado en clase en un solo archivo
 	
-2. Clase (Oscar):
+## 2) Clase (Oscar):
+
 	- EL codigo realizado en clase estructurado en varios archivos:
 		- src:
 			- config: 
 				- connects.js **(Donde hacemos la conexión a mongoDB)**
 			- models:
 				- users.js **(Creamos nuestro modelo de mongoDB)**
-
 			- index.js: **Donde inicializamos a mongo y creamos y buscamos data**
 
-3. Programamos:
+## 3) Programamos:
 	- el codigo fue realizado en base de la estructuración y arquitectura de **Clase (Oscar) - NO USA EXPRESS:**
 		- src:
 			- config: 
@@ -25,11 +26,11 @@
 				
 			- index.js: **Donde inicializamos a mongo y creamos y buscamos data**
 
-4. Tarea (Efrain):
+## 4) Tarea (Efrain):
 	- El codigo mandado como tarea usando Express/MongoDB/CRUD **Clase (Efrain) - NO USA ARQ**
 
 
-5. Tarea (OScar):
+## 5) Tarea (OScar):
 	- Codigo usando Arq/Express/MongoDB/CRUD/Middlewares **Clase (Oscar):**
 
 		- src:
