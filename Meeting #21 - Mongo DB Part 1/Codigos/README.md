@@ -31,22 +31,27 @@ El codigo realizado en clase en un solo archivo
 
 
 ## 5) Tarea (OScar):
-- Codigo usando Arq/Express/MongoDB/CRUD/Middlewares **Clase (Oscar):**
-	- src:
+- Codigo usando **Arq/Express/MongoDB/CRUD/Middlewares** **Clase (Oscar):**
+
+	- src (folder):
+
 		- index.js ->Archivo que se conecta a MongoDb y levanta el server.
+
 		- server.js -> rchivo que contiene la función para levantar el server y utilizar JSON() y el router
-			- config:
+
+			- config (folder):
 				- connect.js -> Contiene 3 funciones:
 					1. initDatabase -> Te permite generar la conexión a MongoDb 
 					2. getDBInstance -> Te permite retornar el obj de la DB para futuras operaciones
 					3. getModel -> Permite obtener el modelo que se necesite para las operaciones CRUD
-			- routers:
+
+			- routers (folder):
 				- restaurantRouter.js -> Archivo que retorna la función con todos los metodos que se van a utilizar con el path definida en server.js y  como también la invocación de sus respectivos middlewares y funciones services
 
-			- middleware:
+			- middleware (folder):
 				- platoExiste.js -> Middleware que se utiliza para chequear que exista el plato 
 
-			- services:
+			- services (folder):
 				- restaurantServices -> Contiene todas las funciones servivces CRUD que se ejecutan en el router. Por lo tanto necesita importar las objetos del modelo para que funcione
 
 
