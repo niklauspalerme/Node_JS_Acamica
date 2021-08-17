@@ -1,4 +1,4 @@
-# Estructura del programa: Clase (Oscar) - Meeting #22 - Mongo part 2 (Transacciones)
+# Estructura del programa: Programamos (Oscar) - Meeting #22 - Mongo part 2 (Transacciones y Doc Embebidos)
 
 ## src:
 
