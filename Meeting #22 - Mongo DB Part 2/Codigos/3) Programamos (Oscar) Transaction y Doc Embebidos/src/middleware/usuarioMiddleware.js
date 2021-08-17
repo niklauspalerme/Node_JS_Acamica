@@ -8,7 +8,7 @@ const findEmail =  async (req,resp,next)=>{
 
         const Usuario = getModel("Usuario");
 
-        const respUsuario = Usuario.findOne({email})
+        const respUsuario = await Usuario.findOne({email})
 
         if (respUsuario === null)
             next

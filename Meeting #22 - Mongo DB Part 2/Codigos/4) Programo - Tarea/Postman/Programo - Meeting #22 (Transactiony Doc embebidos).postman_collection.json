@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "c04a2305-434f-45e6-83d0-f73c62bc8be7",
+		"name": "Programo - Meeting #22 (Transactiony Doc embebidos)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Maria\",\r\n    \"apellido\": \"Palermo\",\r\n    \"email\": \"nicox@gmail.com\",\r\n    \"saldo\": 1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /cuentas/:id/deposito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \t\"telefono\": \"11-22-5445-72\",\r\n    \"direccion\": \"CABA, Palermo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/cuentas/mareja@gmail.com/depositar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cuentas",
+						"mareja@gmail.com",
+						"depositar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /cuentas/:id/transferenica",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \t\"email\": \"nicox@gmail.com\",\r\n    \"monto\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/cuentas/nico@gmail.com/transferencia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cuentas",
+						"nico@gmail.com",
+						"transferencia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
