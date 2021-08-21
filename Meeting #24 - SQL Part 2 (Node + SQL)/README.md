@@ -10,4 +10,4 @@
 
 - **Programo (Efrain):** Aquí tendremos el ejemplo del progamo de una manera mas sencilla. La conexión es mas sencilla como tambien la estructura de la misma.
 
--**Programo (Oscar):** Tenemos una conexión mas compleja pero ordenada propuesta por el profesor. Además el programa cuenta cn un modelo Vista Controlador en su organización de los archivos. La conexión a la DB además tiene la opción de crear la Db y tablas si nos las tiene.
+- **Programo (Oscar):** Tenemos una conexión mas compleja pero ordenada propuesta por el profesor. Además el programa cuenta cn un modelo Vista Controlador en su organización de los archivos. La conexión a la DB además tiene la opción de crear la Db y tablas si nos las tiene.
