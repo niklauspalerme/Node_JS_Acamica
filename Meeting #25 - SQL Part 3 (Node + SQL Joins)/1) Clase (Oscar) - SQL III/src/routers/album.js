@@ -18,6 +18,10 @@ function createAlbumRouter(params) {
 
     router.get('/albums/:id', async (req, resp) => {
         try {
+
+            //Cuando se hace el include no se debe asociar
+            //la table puente "album_song" si no la 2 tablas directas
+            //que seria la Album y la Song
             const Song =  await getModel('Song');
             const Band = getModel('Band')
             const data = await getModel('Album').findOne({
