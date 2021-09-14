@@ -1,4 +1,4 @@
-# Meeting #25 - Pasos para la elaboracion del programa
+# Meeting #25 - NODE + SQL JOINS (Oscar)
 
 - Directorio --> services:
 	- Creamos las conexiones

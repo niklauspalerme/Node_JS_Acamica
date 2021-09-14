@@ -5,13 +5,16 @@ const { createBandRouter } = require('./routers/band.js');
 const { createAlbumRouter } = require('./routers/album.js');
 const { createSongRouter } = require('./routers/song.js');
 
-async function main() {
-    config();
-    const PORT = process.env.PORT || 3000;
-    const server = express();
-    server.use(express.json());
-    server.use(express.urlencoded({extended: false}));
+//////////////////////////////////////////////////////////////
+// Función Principal
 
+async function main() {
+
+    /////////////////////////////////////
+    //Inicialización y variables
+
+    config(); 
+    const PORT = process.env.PORT || 3000;
     const {
         DB_USERNAME,
         DB_PASSWORD,
@@ -19,7 +22,22 @@ async function main() {
         DB_PORT,
         DB_HOST,
     } = process.env;
+
+
+    /////////////////////////////////////
+    //Inicialización del servidor
+
+    const server = express();
+    server.use(express.json());
+    server.use(express.urlencoded({extended: false}));
+
+    
+    /////////////////////////////////////
+    //
+
+
     const isDBOk = await connect(DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    
     if (isDBOk) {
         server.use('/api/v1/', createBandRouter());
         server.use('/api/v1/', createAlbumRouter());

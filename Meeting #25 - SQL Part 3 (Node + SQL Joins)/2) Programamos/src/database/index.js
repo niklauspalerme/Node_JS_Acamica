@@ -1,12 +1,11 @@
 const Sequelize = require("sequelize");
-const { createBandModel } = require("./models/band");
-const { createAlbumModel } = require("./models/album");
-const { createSongModel } = require("./models/song");
-const { createAlbumSongModel } = require("./models/album_song");
+const { createContactoModel } = require("./models/contacto");
+const { createContactoUserModel } = require("./models/contactoi_user");
+const { createUserModel } = require("./models/users");
 
 
 //////////////////////////////////////////////////////////////
-// Variabñes
+// Variables
 
 
 const models = {};
@@ -33,21 +32,18 @@ async function connect(host, port, username, password, database) {
 
 
   //Guardamos los Modelos en la conexión y le mandamos la conexión
-  models.Band = createBandModel(connection);
-  models.Album = createAlbumModel(connection);
-  models.Song = createSongModel(connection);
-  models.AlbumSong = createAlbumSongModel(connection, models.Album, models.Song);
+  models.User = createUserModel(connection);
+  models.Contacto = createContactoModel(connection);
+  models.ContactoUser = createContactoUserModel(connection, models.User, models.Contacto)
 
 
   // Síncronizamos las relaciones
-  models.Band.hasMany(models.Album);  // 1-N
-  models.Album.belongsTo(models.Band); //N-1
-  models.Album.belongsToMany(models.Song, { through: models.AlbumSong }); //N-M --> AlbumSong es la tabla intermedia
-  models.Song.belongsToMany(models.Album, { through: models.AlbumSong }); //M-N --> AlbumSong es la tabla intermedia
+  models.User.belongsToMany(models.Contacto, { through: models.ContactoUser }); //N-M --> AlbumSong es la tabla intermedia
+  models.Contacto.belongsToMany(models.User, { through: models.ContactoUser }); //M-N --> AlbumSong es la tabla intermedia
   
   try {
     await connection.authenticate();
-    await connection.sync({});
+    await connection.sync({force:true});
     console.log('Connection has been established successfully.');
     return true;
   } catch (error) {
